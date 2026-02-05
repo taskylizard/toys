@@ -1,6 +1,6 @@
-# ./
+# Quiet Tools
 
-This template should help get you started developing with Vue 3 in Vite.
+Minimal, dark, soft-surface utilities built with Vue 3, VueUse, and UnoCSS. This starter ships a Base64 encoder/decoder workspace with a neutral, gradient-lit UI.
 
 ## Recommended IDE Setup
 
@@ -19,9 +19,9 @@ This template should help get you started developing with Vue 3 in Vite.
 
 TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) to make the TypeScript language service aware of `.vue` types.
 
-## Customize configuration
+## Styling
 
-See [Vite Configuration Reference](https://vite.dev/config/).
+The UI uses UnoCSS with `presetWind4`, leaning on Tailwind `neutral` tokens for a minimal dark-only palette.
 
 ## Project Setup
 

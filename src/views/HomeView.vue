@@ -1,9 +1,16 @@
 <script setup lang="ts">
-import TheWelcome from '../components/TheWelcome.vue'
+import { RouterLink } from 'vue-router'
 </script>
 
 <template>
-  <main>
-    <TheWelcome />
+  <main class="min-h-screen px-6 py-10 text-neutral-200">
+    <section class="mx-auto flex max-w-3xl flex-col gap-4">
+      <h1 class="text-lg text-neutral-100">tools</h1>
+      <ul class="list-disc pl-5 text-sm text-neutral-400">
+        <li>
+          <RouterLink class="hover:text-neutral-200" to="/base64">base64 encode / decode</RouterLink>
+        </li>
+      </ul>
+    </section>
   </main>
 </template>
