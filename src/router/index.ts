@@ -34,6 +34,11 @@ const router = createRouter({
       name: 'notes',
       component: () => import('../views/NotesView.vue'),
     },
+    {
+      path: '/cron',
+      name: 'cron',
+      component: () => import('../views/CronView.vue'),
+    },
   ],
 })
 
