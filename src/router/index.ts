@@ -49,6 +49,11 @@ const router = createRouter({
       name: 'ids',
       component: () => import('../views/IdsView.vue'),
     },
+    {
+      path: '/hashes',
+      name: 'hashes',
+      component: () => import('../views/HashView.vue'),
+    },
   ],
 })
 
