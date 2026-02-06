@@ -36,7 +36,9 @@ jobs:
         run: pnpm install
 
       - name: Build
-        run: pnpm build-only -- --base=/toys/
+        env:
+          GITHUB_PAGES: "true"
+        run: pnpm build-only
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
