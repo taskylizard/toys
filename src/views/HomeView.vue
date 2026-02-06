@@ -14,6 +14,7 @@ import { RouterLink } from 'vue-router'
         <li><RouterLink class="hover:text-neutral-200" to="/notes">notepad (local storage)</RouterLink></li>
         <li><RouterLink class="hover:text-neutral-200" to="/cron">cron expression builder</RouterLink></li>
         <li><RouterLink class="hover:text-neutral-200" to="/url">url encode / decode</RouterLink></li>
+        <li><RouterLink class="hover:text-neutral-200" to="/ids">uuid, nanoid, ulid generator</RouterLink></li>
       </ul>
     </section>
   </main>

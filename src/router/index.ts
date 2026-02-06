@@ -44,6 +44,11 @@ const router = createRouter({
       name: 'url',
       component: () => import('../views/UrlView.vue'),
     },
+    {
+      path: '/ids',
+      name: 'ids',
+      component: () => import('../views/IdsView.vue'),
+    },
   ],
 })
 
