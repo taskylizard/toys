@@ -59,6 +59,11 @@ const router = createRouter({
       name: 'base-convert',
       component: () => import('../views/BaseConvertView.vue'),
     },
+    {
+      path: '/color',
+      name: 'color',
+      component: () => import('../views/ColorView.vue'),
+    },
   ],
 })
 

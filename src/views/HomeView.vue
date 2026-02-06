@@ -17,6 +17,7 @@ import { RouterLink } from 'vue-router'
         <li><RouterLink class="hover:text-neutral-200" to="/ids">uuid, nanoid, ulid generator</RouterLink></li>
         <li><RouterLink class="hover:text-neutral-200" to="/hashes">hash playground</RouterLink></li>
         <li><RouterLink class="hover:text-neutral-200" to="/base-convert">base conversion</RouterLink></li>
+        <li><RouterLink class="hover:text-neutral-200" to="/color">color picker</RouterLink></li>
       </ul>
     </section>
   </main>
