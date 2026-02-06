@@ -24,6 +24,11 @@ const router = createRouter({
       name: 'markdown',
       component: () => import('../views/MarkdownView.vue'),
     },
+    {
+      path: '/http-status',
+      name: 'http-status',
+      component: () => import('../views/HttpStatusView.vue'),
+    },
   ],
 })
 
