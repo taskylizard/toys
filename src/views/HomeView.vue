@@ -11,6 +11,7 @@ import { RouterLink } from 'vue-router'
         <li><RouterLink class="hover:text-neutral-200" to="/diff">side-by-side text differ</RouterLink></li>
         <li><RouterLink class="hover:text-neutral-200" to="/markdown">markdown previewer</RouterLink></li>
         <li><RouterLink class="hover:text-neutral-200" to="/http-status">http status code lookup</RouterLink></li>
+        <li><RouterLink class="hover:text-neutral-200" to="/notes">notepad (local storage)</RouterLink></li>
       </ul>
     </section>
   </main>

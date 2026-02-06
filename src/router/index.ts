@@ -29,6 +29,11 @@ const router = createRouter({
       name: 'http-status',
       component: () => import('../views/HttpStatusView.vue'),
     },
+    {
+      path: '/notes',
+      name: 'notes',
+      component: () => import('../views/NotesView.vue'),
+    },
   ],
 })
 
