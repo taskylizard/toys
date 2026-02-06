@@ -4,8 +4,10 @@ import { RouterLink } from 'vue-router'
 import SparkMD5 from 'spark-md5'
 
 const input = ref('')
+const errorMessage = ref('')
 
 const encoder = new TextEncoder()
+const cryptoAvailable = typeof globalThis.crypto !== 'undefined' && !!globalThis.crypto.subtle
 
 const digestHex = async (algorithm: string, text: string) => {
   const data = encoder.encode(text)
@@ -21,9 +23,25 @@ const sha256Hash = ref('')
 const sha512Hash = ref('')
 
 const refreshHashes = async () => {
-  sha1Hash.value = await digestHex('SHA-1', input.value)
-  sha256Hash.value = await digestHex('SHA-256', input.value)
-  sha512Hash.value = await digestHex('SHA-512', input.value)
+  errorMessage.value = ''
+  if (!cryptoAvailable) {
+    sha1Hash.value = 'unavailable'
+    sha256Hash.value = 'unavailable'
+    sha512Hash.value = 'unavailable'
+    errorMessage.value = 'web crypto not available'
+    return
+  }
+
+  try {
+    sha1Hash.value = await digestHex('SHA-1', input.value)
+    sha256Hash.value = await digestHex('SHA-256', input.value)
+    sha512Hash.value = await digestHex('SHA-512', input.value)
+  } catch (error) {
+    sha1Hash.value = ''
+    sha256Hash.value = ''
+    sha512Hash.value = ''
+    errorMessage.value = error instanceof Error ? error.message : 'hashing failed'
+  }
 }
 
 watch(
@@ -70,6 +88,7 @@ watch(
             <p class="break-all text-neutral-100">{{ sha512Hash }}</p>
           </div>
         </div>
+        <p v-if="errorMessage" class="text-xs text-neutral-300">{{ errorMessage }}</p>
       </div>
     </section>
   </main>
