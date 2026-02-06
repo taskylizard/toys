@@ -58,9 +58,7 @@ const resetAll = () => {
 <template>
   <main class="min-h-screen px-6 py-10 text-neutral-200">
     <section class="mx-auto flex max-w-3xl flex-col gap-4">
-      <RouterLink class="text-xs text-neutral-400 hover:text-neutral-200" to="/">
-        back
-      </RouterLink>
+      <RouterLink class="text-xs text-neutral-400 hover:text-neutral-200" to="/"> back </RouterLink>
 
       <div class="flex flex-col gap-4 rounded-2xl bg-neutral-900 p-5">
         <div class="flex flex-col gap-2">

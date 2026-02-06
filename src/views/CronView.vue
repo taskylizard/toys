@@ -17,7 +17,9 @@ const day = ref('*')
 const month = ref('*')
 const weekday = ref('*')
 
-const expression = computed(() => `${minute.value} ${hour.value} ${day.value} ${month.value} ${weekday.value}`)
+const expression = computed(
+  () => `${minute.value} ${hour.value} ${day.value} ${month.value} ${weekday.value}`,
+)
 </script>
 
 <template>
@@ -29,32 +31,57 @@ const expression = computed(() => `${minute.value} ${hour.value} ${day.value} ${
       <div class="grid gap-3 md:grid-cols-2">
         <label class="flex flex-col gap-2 text-xs text-neutral-400">
           minute
-          <select v-model="minute" class="rounded-xl bg-neutral-950 px-3 py-2 text-sm text-neutral-100">
-            <option v-for="value in minuteOptions" :key="`minute-${value}`" :value="value">{{ value }}</option>
+          <select
+            v-model="minute"
+            class="rounded-xl bg-neutral-950 px-3 py-2 text-sm text-neutral-100"
+          >
+            <option v-for="value in minuteOptions" :key="`minute-${value}`" :value="value">
+              {{ value }}
+            </option>
           </select>
         </label>
         <label class="flex flex-col gap-2 text-xs text-neutral-400">
           hour
-          <select v-model="hour" class="rounded-xl bg-neutral-950 px-3 py-2 text-sm text-neutral-100">
-            <option v-for="value in hourOptions" :key="`hour-${value}`" :value="value">{{ value }}</option>
+          <select
+            v-model="hour"
+            class="rounded-xl bg-neutral-950 px-3 py-2 text-sm text-neutral-100"
+          >
+            <option v-for="value in hourOptions" :key="`hour-${value}`" :value="value">
+              {{ value }}
+            </option>
           </select>
         </label>
         <label class="flex flex-col gap-2 text-xs text-neutral-400">
           day of month
-          <select v-model="day" class="rounded-xl bg-neutral-950 px-3 py-2 text-sm text-neutral-100">
-            <option v-for="value in dayOptions" :key="`day-${value}`" :value="value">{{ value }}</option>
+          <select
+            v-model="day"
+            class="rounded-xl bg-neutral-950 px-3 py-2 text-sm text-neutral-100"
+          >
+            <option v-for="value in dayOptions" :key="`day-${value}`" :value="value">
+              {{ value }}
+            </option>
           </select>
         </label>
         <label class="flex flex-col gap-2 text-xs text-neutral-400">
           month
-          <select v-model="month" class="rounded-xl bg-neutral-950 px-3 py-2 text-sm text-neutral-100">
-            <option v-for="value in monthOptions" :key="`month-${value}`" :value="value">{{ value }}</option>
+          <select
+            v-model="month"
+            class="rounded-xl bg-neutral-950 px-3 py-2 text-sm text-neutral-100"
+          >
+            <option v-for="value in monthOptions" :key="`month-${value}`" :value="value">
+              {{ value }}
+            </option>
           </select>
         </label>
         <label class="flex flex-col gap-2 text-xs text-neutral-400">
           weekday (0 sunday)
-          <select v-model="weekday" class="rounded-xl bg-neutral-950 px-3 py-2 text-sm text-neutral-100">
-            <option v-for="value in weekdayOptions" :key="`weekday-${value}`" :value="value">{{ value }}</option>
+          <select
+            v-model="weekday"
+            class="rounded-xl bg-neutral-950 px-3 py-2 text-sm text-neutral-100"
+          >
+            <option v-for="value in weekdayOptions" :key="`weekday-${value}`" :value="value">
+              {{ value }}
+            </option>
           </select>
         </label>
       </div>

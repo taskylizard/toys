@@ -10,7 +10,8 @@ const lightness = ref(50)
 const clamp = (value: number, min: number, max: number) => Math.min(Math.max(value, min), max)
 
 const hslCss = computed(
-  () => `hsl(${clamp(hue.value, 0, 360)} ${clamp(saturation.value, 0, 100)}% ${clamp(lightness.value, 0, 100)}%)`,
+  () =>
+    `hsl(${clamp(hue.value, 0, 360)} ${clamp(saturation.value, 0, 100)}% ${clamp(lightness.value, 0, 100)}%)`,
 )
 
 const parsed = computed(() => parse(hslCss.value))

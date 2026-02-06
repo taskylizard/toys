@@ -63,10 +63,14 @@ const formatValue = (base: BaseKey) => {
 
         <div class="flex flex-wrap gap-2 text-xs">
           <button
-            v-for="base in (Object.keys(baseMap) as BaseKey[])"
+            v-for="base in Object.keys(baseMap) as BaseKey[]"
             :key="base"
             class="rounded-full px-4 py-2"
-            :class="selectedBase === base ? 'bg-neutral-800 text-neutral-100' : 'bg-neutral-950 text-neutral-400'"
+            :class="
+              selectedBase === base
+                ? 'bg-neutral-800 text-neutral-100'
+                : 'bg-neutral-950 text-neutral-400'
+            "
             type="button"
             @click="selectedBase = base"
           >

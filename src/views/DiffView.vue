@@ -83,13 +83,21 @@ const diffRows = computed(() => buildRows(leftText.value, rightText.value))
         >
           <div
             class="px-3 py-2"
-            :class="row.type === 'removed' ? 'bg-neutral-800 text-neutral-200' : 'bg-neutral-950 text-neutral-300'"
+            :class="
+              row.type === 'removed'
+                ? 'bg-neutral-800 text-neutral-200'
+                : 'bg-neutral-950 text-neutral-300'
+            "
           >
             {{ row.left || ' ' }}
           </div>
           <div
             class="px-3 py-2"
-            :class="row.type === 'added' ? 'bg-neutral-800 text-neutral-200' : 'bg-neutral-950 text-neutral-300'"
+            :class="
+              row.type === 'added'
+                ? 'bg-neutral-800 text-neutral-200'
+                : 'bg-neutral-950 text-neutral-300'
+            "
           >
             {{ row.right || ' ' }}
           </div>
