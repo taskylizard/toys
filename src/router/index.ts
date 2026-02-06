@@ -54,6 +54,11 @@ const router = createRouter({
       name: 'hashes',
       component: () => import('../views/HashView.vue'),
     },
+    {
+      path: '/base-convert',
+      name: 'base-convert',
+      component: () => import('../views/BaseConvertView.vue'),
+    },
   ],
 })
 
