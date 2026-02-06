@@ -13,3 +13,4 @@ When making changes to the project (new APIs, architectural changes, updated con
 - Layouts prioritize content with modest spacing and restrained borders/shadows.
 - VueUse powers interactive helpers like clipboard handling and timestamps.
 - Install dependencies with `pnpm add <package>` or `pnpm install`; do not edit `package.json` manually for dependency changes.
+- Use conventional commits with no commit body.
