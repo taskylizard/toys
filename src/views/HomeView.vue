@@ -9,6 +9,7 @@ import { RouterLink } from 'vue-router'
       <ul class="list-disc pl-5 text-sm text-neutral-400">
         <li><RouterLink class="hover:text-neutral-200" to="/base64">base64 encode / decode</RouterLink></li>
         <li><RouterLink class="hover:text-neutral-200" to="/diff">side-by-side text differ</RouterLink></li>
+        <li><RouterLink class="hover:text-neutral-200" to="/markdown">markdown previewer</RouterLink></li>
       </ul>
     </section>
   </main>

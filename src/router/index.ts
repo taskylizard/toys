@@ -19,6 +19,11 @@ const router = createRouter({
       name: 'diff',
       component: () => import('../views/DiffView.vue'),
     },
+    {
+      path: '/markdown',
+      name: 'markdown',
+      component: () => import('../views/MarkdownView.vue'),
+    },
   ],
 })
 
