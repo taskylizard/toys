@@ -64,6 +64,11 @@ const router = createRouter({
       name: 'color',
       component: () => import('../views/ColorView.vue'),
     },
+    {
+      path: '/poker',
+      name: 'poker',
+      component: () => import('../views/PokerView.vue'),
+    },
   ],
 })
 

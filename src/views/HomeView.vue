@@ -48,6 +48,9 @@ import { RouterLink } from 'vue-router'
           <RouterLink class="hover:text-neutral-200" to="/base-convert">base conversion</RouterLink>
         </li>
         <li><RouterLink class="hover:text-neutral-200" to="/color">color picker</RouterLink></li>
+        <li>
+          <RouterLink class="hover:text-neutral-200" to="/poker">poker</RouterLink>
+        </li>
       </ul>
     </section>
   </main>
